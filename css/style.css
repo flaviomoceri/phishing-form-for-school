@@ -1,142 +1,301 @@
-*, *:before, *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Nunito', sans-serif;
-    background-color: #dddddd;
-  }
-  
-  form {
-    max-width: 380px;
-    margin: 10px auto;
-    padding: 10px 20px;
-    background: white;
-  }
-  
-  h1 {
-    margin: 0 0 30px 0;
-    text-align: center;
-  }
-  
-  input[type="text"],
-  input[type="password"],
-  input[type="date"],
-  input[type="datetime"],
-  input[type="email"],
-  input[type="number"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="time"],
-  input[type="url"],
-  textarea,
-  select {
-    background: rgba(255,255,255,0.1);
-    border-color: lightgray;
-    border-top-style: double;
-    border-bottom-width: thin;
-    border-left: outset;
-    font-size: 16px;
-    height: auto;
-    margin: 0;
-    outline: 0;
-    padding: 10px;
-    width: 100%;
-    color: #8a97a0;
-    margin-bottom: 20px;
-    border-radius: 5px;
-  }
-  
-  input[type="radio"],
-  input[type="checkbox"] {
-    margin: 0 4px 8px 0;
-  }
-  
-  select {
-    padding: 6px;
-    height: 32px;
-    border-radius: 2px;
-  }
-  
-  button {
-    padding: 10px 10px 10px 10px;
-    color: #FFF;
-    background-color: #2271b1;
-    font-size: 18px;
-    text-align: center;
-    font-style: normal;
-    border-radius: 5px;
-    float: right;
-    width: 30%;
-    border: 1px solid white;
-    border-width: 1px 1px 3px;
-    box-shadow: 0 -1px 0 rgb(255 255 255 / 10%) inset;
-    margin-bottom: 10px;
-  }
-  
-  fieldset {
-    margin-bottom: 30px;
-    border: none;
-  }
-  
-  legend {
-    font-size: 1.4em;
-    margin-bottom: 10px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 8px;
-  }
-  
-  label.light {
-    font-weight: 300;
-    display: inline;
-  }
-  
-  .number {
-    background-color: #5fcf80;
-    color: #fff;
-    height: 30px;
-    width: 30px;
-    display: inline-block;
-    font-size: 0.8em;
-    margin-right: 4px;
-    line-height: 30px;
-    text-align: center;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
-    border-radius: 100%;
-  }
-  .width-form{
-      width: 80% !important;
-  }
-  .checkbox{
-    float: left !important;
-    margin-top: 12px;
-  }
-  .button-checkbox{
-      height: 15;
-  }
-  .text-codice{
-    text-align: center;
-    width: 100%;
-    font-size: 25px;
-    background-color: #f1f1f1;
-    margin-top: 0px !important;
-  }
-  .immagine-nuvola{
-    width: 380px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-  }
-  .view-password{
-    float: right !important;
-    margin-top: 8px !important;
-    width: 25px;
-  }
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "DM Sans", sans-serif;
+	line-height: 1.5;
+	background-color: #edf3f7;
+	padding: 0 2rem;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+
+// iOS Reset 
+input {
+	appearance: none;
+	border-radius: 0;
+}
+
+.card {
+	margin: 2rem auto;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 370px;
+	background-color: #FFF;
+	border-radius: 10px;
+	padding: 1rem;
+  box-shadow: 0 0 40px rgb(0 0 0 / 20%);
+}
+
+/*.card-image {
+	border-radius: 8px;
+	overflow: hidden;
+	padding-bottom: 65%;
+	background-image: url('https://assets.codepen.io/285131/coffee_1.jpg');
+	background-repeat: no-repeat;
+	background-size: 150%;
+	background-position: 0 5%;
+	
+  position: relative;
+}
+*/
+.nuvola{
+  width: 80px;
+}
+.nuvola-h1{
+  color: #006599;
+    display: flex;
+    font-size: 40px;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+
+.nuvola-header{
+  width: 100px;
+}
+.nuvola-h1-header{
+  color: #006599;
+    display: flex;
+    font-size: 50px;
+    font-weight: 100;
+    margin-bottom: -40px;
+}
+#nuvola-div {
+  width: 60%;
+  margin: 0 auto;
+}
+.card-heading {
+  color: #515253;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  margin-top: 25px;
+    margin-bottom: 0px;
+    margin-left: 12px;
+}
+
+.card-form {
+	padding: 0.1rem 1rem 0;
+}
+
+.input {
+	display: flex;
+	flex-direction: column-reverse;
+	position: relative;
+	padding-top: 1.5rem;
+	&+.input {
+		margin-top: 1.5rem;
+	}
+}
+
+.help-button{
+  color: #007bff;
+}
+.help-punto-interrogativo{
+  width: 15px;
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.help-div{
+  float: left;
+  margin-top: 10px;
+}
+
+.input-field {
+	border: 0;
+	z-index: 1;
+	background-color: transparent;
+	border-bottom: 1px solid #f3f3f3; 
+	font: inherit;
+	font-size: 15px;
+	padding: 10px;
+	&:focus, &:valid {
+		outline: 0;
+		border-bottom-color: #6658d3;
+		&+.input-label {
+			color: #6658d3;
+			transform: translateY(-1.5rem);
+		}
+	}
+  font-weight: 500;
+}
+.input-field2 {
+	border: 0;
+	z-index: 1;
+	background-color: transparent;
+	border-bottom: 1px solid #f3f3f3; 
+	font: inherit;
+	font-size: 15px;
+	padding: 10px;
+	&:focus, &:valid {
+		outline: 0;
+		border-bottom-color: #6658d3;
+		&+.input-label {
+			color: #6658d3;
+			transform: translateY(-1.5rem);
+		}
+	}
+  font-weight: 500;
+  width: 85%;
+}
+
+.action {
+	margin-top: 2rem;
+}
+.div-button-show-password{
   
+    margin-left: 90%;
+    margin-top: -55px;
+    width: 15px;
+
+}
+.credenziali-dimenticate{
+  color: #0087cc;
+    cursor: pointer;
+}
+.button-show-password{
+  border: none;
+  background: white;
+  float: right;
+  margin-top: 20px;
+  width: 30px;
+}
+
+divider{
+  border-bottom: 1px solid #f3f3f3;
+    margin-top: 20px;
+}
+.action-button {
+	font: inherit;
+	font-size: 1rem;
+	padding: 10px 5px;
+	width: 110px;
+	font-weight: 10;
+	background-color: #006599;
+	border-radius: 50px;
+float: right;
+	color: #FFF;
+	border: 0;
+	&:focus {
+		outline: 0;
+	}
+}
+
+.card-info {
+	padding: 1rem 1rem;
+	text-align: center;
+	font-size: .875rem;
+	color: #8597a3;
+	a {
+		display: block;
+		color: #6658d3;
+		text-decoration: none;
+	}
+  border-bottom: 1px solid #f3f3f3;
+}
+
+
+
+.input_eye{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 15px;
+    height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.access {
+	margin-top: 1rem;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 25%);
+}
+.access-text{
+  color: #515253;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  margin-top: 15px;
+
+}
+.access-image{
+  width: 20px;
+    float: left;
+}
+.access-button-spid {
+	font: inherit;
+    width: 100%;
+    paddiing-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    font-weight: 800;
+    background-color: #06c;
+    color: #FFF;
+    border: 0;
+	&:focus {
+		outline: 0;
+	}
+}
+.access-button-google {
+	font: inherit;
+    width: 100%;
+    paddiing-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    font-weight: 800;
+    background-color: #4285f4;
+    color: #FFF;
+    border: 0;
+	&:focus {
+		outline: 0;
+	}
+}
+.access-button-microsoft {
+	font: inherit;
+    width: 100%;
+    paddiing-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    font-weight: 800;
+    background-color: white;
+    color: #5e5e5e;
+    border: 1px solid #8c8c8c;
+	&:focus {
+		outline: 0;
+	}
+}
+
+.text-google{
+  font-family: Roboto,sans-serif;
+  font-weight: 100;
+}
+.text-footer{
+  text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    color: #007bff;
+}
+.text-final{
+  color: #666;
+  text-align: center;
+}
+a{
+  color: #007bff;
+}
